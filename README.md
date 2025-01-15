@@ -1,39 +1,57 @@
-# Fantasy-Sports
-Qdrant Fantasy Sports
+# Qdrant Fantasy Sports
+
 This repository contains a FastAPI application for providing fantasy sports suggestions using Qdrant as a vector database. The application takes user preferences and returns relevant player suggestions.
 
-Features
-Get player recommendations based on sport, team, and player preferences.
-FastAPI framework for building APIs.
-Qdrant client for handling vector data.
-Installation
-Clone this repository:
+## Features
 
-git clone https://github.com/manas95826/Qdrant-fantasy-sports.git
-cd Qdrant-fantasy-sports
-Install the required packages:
+- Get player recommendations based on sport, team, and player preferences.
+- FastAPI framework for building APIs.
+- Qdrant client for handling vector data.
 
-pip install fastapi uvicorn qdrant-client
-Set up your Qdrant environment. Make sure to have Qdrant running locally or in a Docker container. If using Docker:
+## Installation
 
-docker run -p 6333:6333 qdrant/qdrant
-Optionally, set the QDRANT_URL environment variable if your Qdrant instance is hosted elsewhere.
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/manas95826/Qdrant-fantasy-sports.git
+   cd Qdrant-fantasy-sports
+   ```
 
-Usage
-Run the FastAPI application:
+2. Install the required packages:
+   ```bash
+   pip install fastapi uvicorn qdrant-client
+   ```
 
-uvicorn app:app --reload
-Open your browser and go to http://localhost:8000/docs to access the API documentation.
+3. Set up your Qdrant environment. Make sure to have Qdrant running locally or in a Docker container. If using Docker:
+   ```bash
+   docker run -p 6333:6333 qdrant/qdrant
+   ```
 
-Use the /suggestions/ endpoint to get player suggestions based on user preferences.
+4. Optionally, set the `QDRANT_URL` environment variable if your Qdrant instance is hosted elsewhere.
 
-Example Request
+## Usage
+
+1. Run the FastAPI application:
+   ```bash
+   uvicorn app:app --reload
+   ```
+
+2. Open your browser and go to `http://localhost:8000/docs` to access the API documentation.
+
+3. Use the `/suggestions/` endpoint to get player suggestions based on user preferences.
+
+## Example Request
+
+```json
 {
   "sport": "Basketball",
   "team": "Lakers",
   "player": "LeBron James"
 }
-Example Response
+```
+
+## Example Response
+
+```json
 {
   "suggestions": [
     {
@@ -50,3 +68,8 @@ Example Response
     }
   ]
 }
+```
+
+## Author
+
+- **Manas Chopra** - [manas95826](https://github.com/manas95826)
