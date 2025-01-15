@@ -72,4 +72,4 @@ This repository contains a FastAPI application for providing fantasy sports sugg
 
 ## Author
 
-- **Manas Chopra** - [manas95826](https://github.com/manas95826)
+- **Rudra Pratap Dash** - [Rudr16a](https://github.com/Rudr16a)
